@@ -1,0 +1,153 @@
+body {
+  background: $mercury;
+  font-size: 14px;
+  margin: 0 auto;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 37px;
+  margin: 0.5rem 0;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+p {
+  line-height: 20px;
+  color: $tundora;
+  hyphens: auto;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: $black;
+  background-color: $black;
+  margin: 1em 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.container {
+  padding: 0 56px;
+}
+
+.flex {
+  display: flex;
+  margin: 0 -10px;
+  &.row {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  &.flex-align-stretch {
+    align-items: stretch;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .flex-item {
+    padding: 0 10px;
+    flex: 1 0;
+    &--3 {
+      flex: 3 0;
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+main {
+  margin: 2.5rem 0 1.5em;
+}
+
+.content-block {
+  background-color: $white;
+  padding: 1.5em;
+  height: 100%;
+  p {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid $mercury;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+article {
+  padding: 1.5em;
+  background-color: $white;
+  margin-bottom: 1.5em;
+}
+
+.form {
+  border: 1px solid $mine-shaft;
+  padding: 1.5em;
+  &__label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid $mine-shaft;
+    padding: 0.5em 0.8em;
+    margin-bottom: 1.5em;
+    font-size: 14px;
+  }
+  &__submit {
+    border: none;
+    background-color: $razzmatazz;
+    color: $white;
+    font-size: 14px;
+    padding: 0.7em 2em;
+    text-transform: uppercase;
+  }
+  &__error {
+    border-color: red;
+    &::-webkit-input-placeholder {
+      color: pink;
+    }
+    &::-moz-placeholder {
+      color: pink;
+    }
+    &:-ms-input-placeholder {
+      color: pink;
+    }
+    &:-moz-placeholder {
+      color: pink;
+    }
+  }
+  #error-block:not(:empty) {
+    color: red;
+    margin-bottom: 1em;
+  }
+  #success-block:not(:empty) {
+    color: green;
+    margin-bottom: 1em;
+  }
+}

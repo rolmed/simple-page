@@ -1,0 +1,162 @@
+header {
+  background-color: $razzmatazz;
+  padding: 1em 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+}
+
+.brand {
+  margin-top: 26px;
+  white-space: nowrap;
+  &__link {
+    color: $cotton-candy;
+    font-weight: 600;
+    font-size: 60px;
+    text-decoration: none;
+    display: block;
+    line-height: 46px;
+  }
+}
+
+.secondary-navigation {
+  text-align: right;
+  margin-bottom: 35px;
+  &__menu-item {
+    &:after {
+      content: '';
+      margin: 0 0.5rem;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $black;
+    &:after:not(:last-child) {
+
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.primary-navigation {
+  text-align: right;
+  margin-right: -0.5em;
+  &__link {
+    text-decoration: none;
+    color: $white;
+    font-size: 20px;
+    padding: 1em 0.5em;
+    &:hover {
+      color: $mine-shaft;
+    }
+  }
+  &__submenu {
+    position: relative;
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+    &__content {
+      display: none;
+      position: absolute;
+      background-color: $mine-shaft;
+      text-align: left;
+      transform: translate(-50%, 0%);
+      left: 50%;
+      top: 35px;
+      &__item {
+        padding: 7px 14px 7px 7px;
+        display: block;
+        a {
+          white-space: nowrap;
+          font-size: 12px;
+          padding: initial;
+        }
+        &:hover {
+          background-color: lighten($mine-shaft, 5);
+          a {
+            color: $white;
+          }
+        }
+      }
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: $mine-shaft;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+.mobile-navigation {
+  display: none;
+  float: right;
+  margin-top: 18px;
+  position: relative;
+  &__control {
+    color: $mine-shaft;
+    padding: 0.5em 1em;
+    background-color: $cotton-candy;
+    display: block;
+    span {
+      width: 35px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+      display: block;
+    }
+    &:hover {
+      background-color: $silver;
+    }
+  }
+  &__menu {
+    position: absolute;
+    right: 0;
+    background-color: $mine-shaft;
+  }
+  &__menu-item {
+    display: block;
+    &:hover {
+      background-color: lighten($mine-shaft, 5);
+      a {
+        color: $white;
+      }
+    }
+    &.primary a {
+      text-transform: uppercase;
+    }
+    &:not(.primary) a{
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+  &__link {
+    padding: 1em 2em;
+    display: block;
+    color: $white;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+}

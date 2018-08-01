@@ -1,0 +1,23 @@
+@media screen and (max-width: 992px) {
+  .secondary-navigation, .primary-navigation {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+
+  .flex {
+    &.row {
+      flex-flow: row wrap;
+    }
+    .flex-item {
+      flex: 1 auto;
+      margin-bottom: 1em;
+    }
+  }
+
+  .footer-brand {
+    margin-top: 1em;
+  }
+}
